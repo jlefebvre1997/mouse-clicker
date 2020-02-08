@@ -2,15 +2,17 @@ const initialState = [
   {
     id: 'MOUSE1',
     name: 'Gruyère haut de gamme',
+    effectLabel: 'Triple le fromage par click',
     target: 'mouse',
-    effect: (value) => value * 3
+    effect: value => value * 3,
+    price: 50
   }
 ];
 
 const upgrades = (state = initialState, action) => {
   switch(action.type) {
-    case 'BUY_UPGRADE':
-      return state.filter(upgrade => upgrade.id === action.id);
+    case 'REMOVE_UPGRADE':
+      return state.filter(upgrade => upgrade.name !== action.name);
     default:
       return state;
   }

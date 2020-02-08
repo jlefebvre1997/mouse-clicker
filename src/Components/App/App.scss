@@ -36,3 +36,22 @@
     transform: rotate(360deg);
   }
 }
+
+.app-btn {
+  padding: 15px;
+  border-radius: 15px;
+  border: 1px grey;
+
+  &:focus {
+     outline: none;
+  }
+}
+
+.game-objects {
+  display: flex;
+  margin-top: 10px;
+
+  &__section {
+    flex-basis: 100%;
+  }
+}
